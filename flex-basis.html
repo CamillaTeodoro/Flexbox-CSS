@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex basis</title>
+    <style>
+        .flex-container{
+            max-width: 400px;
+            border: 2px solid black;
+            display: flex;
+        }
+
+        .item{
+            background-color: goldenrod;
+            color: black;
+            text-align: center;
+            margin: 5px;
+        }
+        .auto{
+            flex-basis: auto;
+        }
+
+        .fg-1{
+            flex-grow: 1;
+        }
+
+        .fg-2{
+            flex-grow: 2; 
+        }
+
+        .zero{
+            flex-basis: 0;
+        }
+
+        .fb-100{
+            flex-basis: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <p>Basis Auto</p> <!--Proporcional ao tamanho do conteudo interno -->
+    <div class="flex-container">
+        <div class="item auto fg-1">A</div>
+        <div class="item auto fg-1">BBB</div>
+        <div class="item auto fg-1">C </div>
+        <div class="item auto fg-1">DDDD</div>
+    </div>
+    
+     <p>Basis Zero</p> <!--Tenta ao maximo manter os itens do mesmo tamanho - fg precisa ser o mesmo para todos-->
+    <div class="flex-container">
+        <div class="item zero fg-1">AAAAA</div>
+        <div class="item zero fg-1">BBB</div>
+        <div class="item zero fg-1">C </div>
+        <div class="item zero fg-1">DDDD</div>
+    </div>
+     <p>Basis + width</p> <!-- Minimo de 100px de tamanho antes da distribuição de espaço-->
+    <div class="flex-container">
+        <div class="item fb-100">AAAAA</div>
+        <div class="item fb-100">BBB</div>
+        <div class="item fb-100">C </div>
+        <div class="item fb-100">DDDD</div>
+    </div>
+</body>
+</html>

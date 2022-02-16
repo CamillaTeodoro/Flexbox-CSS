@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Align-self</title>
+    <style>
+        .flex-container{
+            max-width: 400px;
+            border: 2px solid black;
+            display: flex;
+            margin-bottom: 10px;
+        }
+
+        .item{
+            background-color: #20da58;
+            color: black;
+            text-align: center;
+            margin: 5px;
+            font-size: 20px;
+        }
+
+        .center{
+            align-self: center;
+        }
+
+        .start{
+            align-self: flex-start;
+        }
+
+        .end{
+            align-self: flex-end;
+        }
+
+        .baseline{
+            align-self: baseline;
+        }
+
+        .stretch{
+            align-self: stretch;
+        }
+
+        .auto{
+            align-self: auto;
+        }
+        .column{
+            flex-direction: column;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h3>Row</h3>
+    <section class="flex-container">
+        <div class="item auto">AAA</div>
+        <div class="item auto">233453</div>
+        <div class="item auto">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+        <div class="item auto">2</div>
+    </section>
+    
+    <section class="flex-container">
+        <div class="item center">AAAA</div>
+        <div class="item end">233453</div>
+        <div class="item baseline">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+        <div class="item stretch">2</div>
+        <div class="item auto">Lorem ipsum dolor sit amet, cons.</div>
+        <div class="item start">2</div>
+    </section>
+   
+    <h3>Column</h3>
+    <section class="flex-container column">
+        <div class="item auto ">AAA</div>
+        <div class="item auto">233453</div>
+        <div class="item auto">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+        <div class="item auto">2</div>
+    </section>
+    
+    <section class="flex-container column">
+        <div class="item center">AAAA</div>
+        <div class="item end">233453</div>
+        <div class="item baseline">Lorem ipsum dolor sit amet, consectetur .</div>
+        <div class="item stretch">2</div>
+        <div class="item auto">Lorem ipsum dolor sit amet, cons.</div>
+        <div class="item start">2</div>
+    </section>
+
+</body>
+</html>
